@@ -1,0 +1,32 @@
+2072042-MosesMarzukiSamosir
+Thihs to add
+1. Add File Chooser implementation to save and load file --> Done
+2. add save and load 2 using java nio --> Done
+3. add error scenario that potentially happen ?
+	- list all error scenario that potentially happen ?
+
+	- no selected data/file when use file chooser
+	- load data with other than json file
+4. is it better to save data on plain text or json ? Why?
+	I think json is better than txt file. 
+	Because A json/xml file can be interpreted directly into 
+	the language and converted to native variables, 
+	such as arrays, strings, integers, etc
+5. is there a better format to json to store data on plain text ?
+	- .XML
+	- .YAML
+6. is it better to save data on file instead of dedicated database ?
+	Yes, because XML more secure than json. And YAML is more readability than Json.
+7. Can you test if a specific file exist in specified path with java ?
+	YES, Using Files.exist() and Files.notExist().First we need path by using Files.createTempFile()
+8. Can you test if a specific directory exist in specified path with java ?
+	YES, Using Files.exist() and Files.notExist().First we need path by using Files.createTempDirectory()
+9. Can you delete or move using java ?
+	Yes i can, By using Files.move()
+	First we need to get file path and than we can rename file by using file.resolveSibling("newname")
+	and than we can move file to new directory with get new directory and exec it using 
+	Files.move(file,newDir.resolve(file.getfilename()),StandardCopyOption.ATOMIC_MOVE, 
+    	StandardCopyOption.REPLACE_EXISTING); 
+10. Can you think of potentiall security problem when you allow java to free change file on your computer?
+	I think java malware is one of many problem in this problem. 
+	just as we access paths and manipulate data, so can malware too.
